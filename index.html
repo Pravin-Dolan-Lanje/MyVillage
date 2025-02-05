@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title> Village Project </title>
+	<title>Siregaon Bandh </title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -10,6 +10,17 @@
 
 	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+	<!-- FontAwesome for Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+
 
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -22,10 +33,17 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="scss/style.css">
+
+	<!-- Latest AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- Latest AOS JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 
 <body>
 
+	<!-- Navigation Bar -->
 	<nav class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
 			<a class="navbar-brand" href="index.html">Village <span> Siregaon Bandh </span></a>
@@ -33,397 +51,526 @@
 				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
-
 			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
+				<ul class="navbar-nav ms-auto">
 					<li class="nav-item active"><a href="index.html" class="nav-link">HOME</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
-					<li class="nav-item "><a href="directory.html" class="nav-link"> DIRECTORY </a></li>
-					<li class="nav-item"><a href="department.html" class="nav-link"> DEPARTMENTS</a></li>
-					<li class="nav-item"><a href="tourism.html" class="nav-link"> TOURISM </a></li> 
-					<!-- <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li> -->
-					<li class="nav-item"><a href="document.html" class="nav-link">DOCUMENTS</a></li>
-					<li class="nav-item  "><a href="forms.html" class="nav-link"> FORMS </a></li>
-					<li class="nav-item"><a href="services.html" class="nav-link"> SERVIESE </a></li>
-					<li class="nav-item"><a href="schemes.html" class="nav-link">SCHEMES </a></li> 
-					
-			 </ul>
+					<!-- About Dropdown with Nested Submenus -->
+					<li class="nav-item dropdown">
+						<a href="fff.html"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" >ABOUT</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" class="dropdown-item">History</a></li>
+							<li class="dropdown-submenu">
+								<a class="dropdown-item dropdown-toggle" href="#">Culture</a>
+								<ul class="dropdown-menu">
+									<li><a href="#" class="dropdown-item">Festivals</a></li>
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">Traditions</a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="dropdown-item">Traditional Music</a></li>
+											<li><a href="#" class="dropdown-item">Dances</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" class="dropdown-item">Geography</a></li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="directory.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">DIRECTORY</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" class="dropdown-item">S.T.D and PIN CODE</a></li>
+							<li><a href="#" class="dropdown-item">Public Utilities</a></li>
+
+						</ul>
+					</li>
+
+					<!-- Departments Dropdown with Nested Submenus -->
+					<li class="nav-item dropdown">
+						<a href="department.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">DEPARTMENTS</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" class="dropdown-item">Health</a></li>
+							<li><a href="#" class="dropdown-item">Education</a></li>
+							<li class="dropdown-submenu">
+								<a class="dropdown-item dropdown-toggle" href="#">Government</a>
+								<ul class="dropdown-menu">
+									<li class="dropdown-submenu">
+										<a class="dropdown-item dropdown-toggle" href="#">Panchayat</a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="dropdown-item">Urban Planning</a>
+											</li>
+											<li><a href="#" class="dropdown-item">Public Works</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="tourism.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">TOURISM</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" class="dropdown-item">How to Reach</a></li>
+							<li><a href="#" class="dropdown-item">Tourist Places</a></li>
+
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="document.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">DOCUMENTS</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" class="dropdown-item">Census</a></li>
+							<li><a href="#" class="dropdown-item">Other</a></li>
+
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="forms.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">FORMS</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" class="dropdown-item">Government & Civic </a></li>
+							<li><a href="#" class="dropdown-item"> Land & Property</a></li>
+							<li><a href="#" class="dropdown-item">Panchayat & Village Services </a></li>
+							<li><a href="#" class="dropdown-item"> Education & Scholarship</a></li>
+							<li><a href="#" class="dropdown-item"> Farmer & Agriculture </a></li>
+
+
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="services.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">SERVICES</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" class="dropdown-item"> Agriculture & Farmer </a></li>
+							<li><a href="#" class="dropdown-item"> Education & Student </a></li>
+							<li><a href="#" class="dropdown-item">Health & Medical </a></li>
+							<li><a href="#" class="dropdown-item"> Panchayat & Village</a></li>
+							<li><a href="#" class="dropdown-item"> Government & Civic</a></li>
+
+
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="schemes.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">SCHEMES</a>
+						<ul class="dropdown-menu">
+							<li><a href="abc.html" class="dropdown-item"> Housing & Infrastructure </a></li>
+							<li><a href="#" class="dropdown-item"> Women & Child Welfare </a></li>
+							<li><a href="#" class="dropdown-item">Education & Student </a></li>
+							<li><a href="#" class="dropdown-item"> Agriculture & Farmer</a></li>
+
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- END nav -->
 	<section class="hero-wrap hero-wrap-2">
-        <div class="slide active" data-title="Prize Winner">
-            <img src="./images/vill/membersgram.jpg" alt="Image 1">
-        </div>
-        <div class="slide" data-title="Meeting">
-            <img src="./images/vill/grampanchayat2.jpg" alt="Image 2">
-        </div>
-        <div class="slide" data-title="Cleaning">
-            <img src="./images/vill/grampanchayat.jpg" alt="Image 3">
-        </div>
-        <div class="slider-controls">
-            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-  
+		<div class="slide active" data-title="Bringing Home the Trophy! 🥇">
+			<img src="./images/vill/membersgram.jpg" alt="Image 1">
+		</div>
+		<div class="slide" data-title="Meeting">
+			<img src="./images/vill/grampanchayat2.jpg" alt="Image 2">
+		</div>
+		<div class="slide" data-title="Grampanchayat Siregaon/Bandh">
+			<img src="./images/vill/grampanchayat.jpg" alt="Image 3">
+		</div>
+		<div class="slider-controls">
+			<button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+			<button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+		</div>
 
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 ftco-animate pb-5 text-center">
-                <h1 class="mb-3 bread" id="image-title">Members Gram</h1>
-                <p class="breadcrumbs"><span class="mr-2">Home</span></p>
-            </div>
-        </div>
-    </div>
-</section>
-	<!-- about and notice board -->
-	<section class="content">
-        <div class="about-us">
-           <CENTER> <h2>About Us</h2></CENTER>
-            <p>Siregaon is a Village in Arjuni Morgaon Taluka in Gondia District of Maharashtra State, India. It belongs to Vidarbh region . It belongs to Nagpur Division . It is located 70 KM towards South from District head quarters Gondia. 17 KM from Arjuni-Morgaon. 909 KM from State capital Mumbai
-            </p>
-				<P>Siregaon Pin code is 441702 and postal head office is Navegaon Bandh .</P>
-				
-				<P>Gudhari ( 5 KM ) , Bhiwkhidaki ( 5 KM ) , Silezari ( 5 KM ) , Bortola ( 6 KM ) , Sawartola ( 8 KM ) are the nearby Villages to Siregaon. Siregaon is surrounded by Arjuni Morgaon Taluka towards South , Lakhani Taluka towards west , Sadak Arjuni Taluka towards North , Lakhandur Taluka towards South .
-				</P>
-				<P>Pauni , Bhandara , Tirora , Tumsar are the near by Cities to Siregaon.
-				</P>
-			<P>This Place is in the border of the Gondia District and Bhandara District. Bhandara District Lakhandur is South towards this place .</p>
-        </div>
-        <div class="notice-board">
-			<center>
-            <h2>Notice Board</h2></center>
-			<div class="scroll-container">
-				<div class="scroll-text"> 
-				<p>	 <li>notice 1</li>
-					<li>notice 2</li>
-					<li>notice 3</li>
-					<li>notice 4</li>
-					<li>notice 5</li>
-				</p>
-				
+
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text align-items-end justify-content-center">
+				<div class="col-md-9 ftco-animate pb-5 text-center">
+					<h1 class="mb-3 bread" id="image-title">Bringing Home the Trophy! 🥇</h1>
+					<p class="breadcrumbs"><span class="mr-2">Home</span></p>
 				</div>
 			</div>
-		
-              
-        </div>
-		
-    </section>
-	
-    <!-- end -->
+		</div>
+	</section>
+	<!-- about and notice board -->
+	<section class="content">
+		<div class="about-us">
+			<CENTER>
+				<h2>About Us</h2>
+			</CENTER>
+			<p>Siregaon is a Village in Arjuni Morgaon Taluka in Gondia District of Maharashtra State, India. It belongs
+				to Vidarbh region . It belongs to Nagpur Division . It is located 70 KM towards South from District head
+				quarters Gondia. 17 KM from Arjuni-Morgaon. 909 KM from State capital Mumbai
+			</p>
+			<P>Siregaon Pin code is 441702 and postal head office is Navegaon Bandh .</P>
+
+			<P>Gudhari ( 5 KM ) , Bhiwkhidaki ( 5 KM ) , Silezari ( 5 KM ) , Bortola ( 6 KM ) , Sawartola ( 8 KM ) are
+				the nearby Villages to Siregaon. Siregaon is surrounded by Arjuni Morgaon Taluka towards South , Lakhani
+				Taluka towards west , Sadak Arjuni Taluka towards North , Lakhandur Taluka towards South .
+			</P>
+			<P>Pauni , Bhandara , Tirora , Tumsar are the near by Cities to Siregaon.
+			</P>
+			<P>This Place is in the border of the Gondia District and Bhandara District. Bhandara District Lakhandur is
+				South towards this place .</p>
+		</div>
+		<div class="notice-board">
+			<center>
+				<h2>Notice Board</h2>
+			</center>
+			<div class="scroll-container">
+				<div class="scroll-text">
+					<p>
+						<li>notice 1</li>
+						<li>notice 2</li>
+						<li>notice 3</li>
+						<li>notice 4</li>
+						<li>notice 5</li>
+					</p>
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</section>
+
+	<!-- end -->
 	<section class="ftco-section">
-		<center><h1><b>Members</b></h1></center>
+		<center>
+			<h1><b>Members</b></h1>
+		</center> 
 		<div class="container-fluid px-md-5">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="block-2 ftco-animate">
-						
-							<div class="front" style="background-image: url(images/vill/membersgram.jpg);">
-								<div class="box">
-									<!-- <h2> Inspirer </h2>
+
+						<div class="front" style="background-image: url(images/vill/membersgram.jpg);">
+							<div class="box">
+								<!-- <h2> Inspirer </h2>
 									<p> Teacher </p> -->
-								</div>
 							</div>
-							
-						
+						</div>
+
+
 					</div>
 				</div>
 				<div class="col-lg-9 col-sm-12">
 					<div class="block-2 ftco-animate">
-						
-							<div class="services">
-							    <div class="front" style="background-image: url(//images/vill/members.png);">
-								  <div class="box">
-									
+
+						<div class="services">
+							<div class="front" style="background-image: url();">
+								<div class="box">
+
 
 									<h2> Gram Panchayat Members
 									</h2>
-									<p>The Gram Panchayat of Siregaon Bandh is committed to serving the needs of our community. Our members work tirelessly to ensure the development and progress of our village.
+									<p>The Gram Panchayat of Siregaon Bandh is committed to serving the needs of our
+										community. Our members work tirelessly to ensure the development and progress of
+										our village.
 									</p>
-									<p>The Gram Panchayat of Siregaon Bandh is committed to serving the needs of our community. Our members work tirelessly to ensure the development and progress of our village.</p>
+									<p>The Gram Panchayat of Siregaon Bandh is committed to serving the needs of our
+										community. Our members work tirelessly to ensure the development and progress of
+										our village.</p>
 
 									<h2>Meet Our Members</h2>
-									
-									<h2>- Sarpanch:</h2><p>Mrs. Sagertai Chimankar</p>
-									<h2>- Panchayat Members:</h2>
-										<p>- Mr. Hemkrisna Sangrame, <br>
-										- Mr.  Manraj Pachare,<br>
-										- Mr. Yasvant Kumbhare.</p>
-									
-									<h2>Roles and Responsibilities</h2>
-									
-									<p>Our Gram Panchayat members and staff are responsible for:</p>
-									
-									<p>- Implementing development projects and schemes<br>
-									- Providing basic amenities and services to the community<br>
-									- Maintaining law and order in the village<br>
-									- Addressing grievances and concerns of the community</p>
-									
-								   </div>	
-								      <a href="./members/members.php" class="btn-custom d-flex align-items-center justify-content-center"><span
-									   class="ion-ios-arrow-round-forward"></span></a>
-						        </div>
-							</div>
-							
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>			
-	<section class="ftco-section">
-		<center><h1><b>Photo Gallery</b></h1></center>
-					
-		<div class="container-fluid px-md-5">
-			<div class="row">
-				
-				<div class="col-lg-3 col-sm-6">
-					<div class="block-2 ftco-animate">
-						
-							<div class="front" style="background-image: url(images/vill/gallery.jpg);">
-								<div class="box">
-									<!-- <h2> LandLord </h2>
-									<p> James Arthur </p> -->
-								</div>
-							</div>
-							
-					
-					</div>
-				</div>
-				<div class="col-lg-9 col-sm-12">
-					<div class="block-2 ftco-animate">
-						
-							<div class="services">
-							<div class="front" style="background-image: url(//images/vill/gallery..png);">
-								<div class="box">
-											<h2> Photo Gallery </h2>
-											<p> 📸 Explore Siregaon Bandh Through Pictures</p>
 
-											<p>	"A picture speaks a thousand words! Dive into the heart of Siregaon Bandh and experience its beauty, culture, and heritage through our photo gallery."
-												</p>
-												<h2>🌿 Natural Beauty & Landscapes</h2>
-												
-												<p>See the breathtaking fields, rivers, and lush greenery that define our village's charm.</p>
-												
-											<h2>	🏡 Everyday Life in the Village</h2>
-												
-												<p>Capture the essence of daily life—from traditional farming to bustling village markets and warm community gatherings.</p>
-												
-												<h2>🎉 Festivals & Celebrations</h2>
-												
-												<p>Experience the vibrant colors and traditions of our local festivals, where culture and joy come alive.</p>
-												
-												<h2>🏛 Historical & Religious Landmarks</h2>
-												
-												<p>Discover the rich history of Siregaon Bandh through its temples, monuments, and sacred places.</p>
-												
-												<h2>👥 People & Traditions</h2>
-												
-											<p>	Meet the people of Siregaon Bandh—farmers, artisans, and families who preserve our heritage. </p>
+									<h2>- Sarpanch:</h2>
+									<p>Mrs. Sagertai Chimankar</p>
+									<h2>- Panchayat Members:</h2>
+									<p>- Mr. Hemkrisna Sangrame, <br>
+										- Mr. Manraj Pachare,<br>
+										- Mr. Yasvant Kumbhare.</p>
+
+									<h2>Roles and Responsibilities</h2>
+
+									<p>Our Gram Panchayat members and staff are responsible for:</p>
+
+									<p>- Implementing development projects and schemes<br>
+										- Providing basic amenities and services to the community<br>
+										- Maintaining law and order in the village<br>
+										- Addressing grievances and concerns of the community</p>
+
 								</div>
-									     <a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span
+								<a href="./subindex/members.html"
+									class="btn-custom d-flex align-items-center justify-content-center"><span
 										class="ion-ios-arrow-round-forward"></span></a>
 							</div>
-							</div>
-						
-							
 						</div>
+
+
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>	
-
+	</section>
 	<section class="ftco-section">
-		<center><h1><b>School / College</b></h1></center>
+		<center>
+			<h1><b>Photo Gallery</b></h1>
+		</center>
+
 		<div class="container-fluid px-md-5">
-			<div class="row">	
+			<div class="row">
 
 				<div class="col-lg-3 col-sm-6">
 					<div class="block-2 ftco-animate">
-						
-							<div class="front" style="background-image: url(images/vill/schoolcollage.jpg);">
-								<div class="box">
-									<!-- <h2> Inspirer </h2>
-									<p> Teacher </p> -->
-									
-								</div>
+
+						<div class="front" style="background-image: url(images/vill/gallery.jpg);">
+							<div class="box">
+								<!-- <h2> LandLord </h2>
+									<p> James Arthur </p> -->
 							</div>
-							
-					
+						</div>
+
+
 					</div>
 				</div>
 				<div class="col-lg-9 col-sm-12">
 					<div class="block-2 ftco-animate">
-						
-                            <div class="services">
-							<div class="front" style="background-image: url(//images/vill/school.png);">
+
+						<div class="services">
+							<div class="front" style="background-image: url();">
+								<div class="box">
+									<h2> Photo Gallery </h2>
+									<p> 📸 Explore Siregaon Bandh Through Pictures</p>
+
+									<p> "A picture speaks a thousand words! Dive into the heart of Siregaon Bandh and
+										experience its beauty, culture, and heritage through our photo gallery."
+									</p>
+									<h2>🌿 Natural Beauty & Landscapes</h2>
+
+									<p>See the breathtaking fields, rivers, and lush greenery that define our village's
+										charm.</p>
+
+									<h2> 🏡 Everyday Life in the Village</h2>
+
+									<p>Capture the essence of daily life—from traditional farming to bustling village
+										markets and warm community gatherings.</p>
+
+									<h2>🎉 Festivals & Celebrations</h2>
+
+									<p>Experience the vibrant colors and traditions of our local festivals, where
+										culture and joy come alive.</p>
+
+									<h2>🏛 Historical & Religious Landmarks</h2>
+
+									<p>Discover the rich history of Siregaon Bandh through its temples, monuments, and
+										sacred places.</p>
+
+									<h2>👥 People & Traditions</h2>
+
+									<p> Meet the people of Siregaon Bandh—farmers, artisans, and families who preserve
+										our heritage. </p>
+								</div>
+								<a href="./subindex/gallery.html" class="btn-custom d-flex align-items-center justify-content-center"><span
+										class="ion-ios-arrow-round-forward"></span></a>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section class="ftco-section">
+		<center>
+			<h1><b>School / College</b></h1>
+		</center>
+		<div class="container-fluid px-md-5">
+			<div class="row">
+
+				<div class="col-lg-3 col-sm-6">
+					<div class="block-2 ftco-animate">
+
+						<div class="front" style="background-image: url(images/vill/schoolcollage.jpg);">
+							<div class="box">
+								<!-- <h2> Inspirer </h2>
+									<p> Teacher </p> -->
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="col-lg-9 col-sm-12">
+					<div class="block-2 ftco-animate">
+
+						<div class="services">
+							<div class="front" style="background-image: url();">
 
 								<div class="box">
 
 									<h2> School/College </h2>
 									<h2>🏫 Education in Siregaon Bandh</h2>
 
-									<p>"Empowering the future through education—discover the schools and colleges that shape young minds in our village."
+									<p>"Empowering the future through education—discover the schools and colleges that
+										shape young minds in our village."
 									</p>
 									<h2>📍 List of Educational Institutions</h2>
-									
+
 									<p>Provide a list of schools and colleges in Siregaon Bandh, including:</p>
-									
+
 									<p>Primary & Secondary Schools – Names, locations, and brief details.</p>
-									
+
 									<p>Colleges – Available courses and special programs.</p>
-									
-									
+
+
 									<h2>📚 Facilities & Infrastructure</h2>
-									
-									<p>Highlight classrooms, libraries, playgrounds, and laboratories that contribute to quality education.
+
+									<p>Highlight classrooms, libraries, playgrounds, and laboratories that contribute to
+										quality education.
 									</p>
 									<h2>🎓 Achievements & Alumni</h2>
-									
-								<p>	Showcase student achievements, notable alumni, and success stories.</p>
-									
+
+									<p> Showcase student achievements, notable alumni, and success stories.</p>
+
 									<h2>🎭 Extracurricular Activities</h2>
-									
-									<p>Include cultural programs, sports, and other events that help in overall development.</p>
-                                </div>
-								<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span
-									class="ion-ios-arrow-round-forward"></span></a>
+
+									<p>Include cultural programs, sports, and other events that help in overall
+										development.</p>
+								</div>
+								<a href="/subindex/school.html" class="btn-custom d-flex align-items-center justify-content-center"><span
+										class="ion-ios-arrow-round-forward"></span></a>
 							</div>
-							</div>
-						
-							
 						</div>
+
+
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 	</section>
-	
+
 	<section class="ftco-section">
-		<center><h1><b>Shops</b></h1></center>
+		<center>
+			<h1><b>Shops</b></h1>
+		</center>
 		<div class="container-fluid px-md-5">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="block-2 ftco-animate">
-						
-							<div class="front" style="background-image: url(images/vill/shop.jpg);">
-								<div class="box">
-									<!-- <h2> Concern Citizen </h2>
+
+						<div class="front" style="background-image: url(images/vill/shop.jpg);">
+							<div class="box">
+								<!-- <h2> Concern Citizen </h2>
 									<p> Samuel James </p> -->
-								</div>
 							</div>
-							
-						
+						</div>
+
+
 					</div>
 				</div>
 				<div class="col-lg-9 col-sm-12">
 					<div class="block-2 ftco-animate">
-						
-							<div class="services">
-							<div class="front" style="background-image: url(//images/vill/shops.png);">
+
+						<div class="services">
+							<div class="front" style="background-image: url();">
 								<div class="box">
 									<h2> Shops </h2>
 									<h2>🛍 Shops & Businesses in Siregaon Bandh</h2>
 
-									<p>"From daily essentials to unique local products, explore the shops that serve our village community."
+									<p>"From daily essentials to unique local products, explore the shops that serve our
+										village community."
 									</p>
 									<h2>🛒 Local Shops & Services</h2>
-									
+
 									<h2> Different types of shops available, such as:</h2>
-									
+
 									<p>Grocery Stores – Daily essentials, fresh produce, and household items.</p>
-									
+
 									<p>Clothing & Footwear – Traditional and modern fashion choices.</p>
-									
+
 									<p>Hardware & Agriculture Supplies – Tools, fertilizers, and farming essentials.</p>
-									
+
 									<p>Medical Stores & Clinics – Pharmacies and healthcare services.</p>
-									
+
 									<p>Eateries & Sweet Shops – Local snacks, sweets, and special dishes.</p>
-									
-									
+
+
 									<h2>🌟 Featured Businesses</h2>
-									
+
 									<p>Highlight well-known or unique shops, along with their specialties.</p>
-									
+
 									<h2>🛒 Why Shop Local?</h2>
-									
-									<p>Encourage supporting village businesses by explaining how they contribute to the local economy.</p>
+
+									<p>Encourage supporting village businesses by explaining how they contribute to the
+										local economy.</p>
 								</div>
-								<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span
-									class="ion-ios-arrow-round-forward"></span></a>
-						    </div>
+								<a href="/subindex/Shops.html" class="btn-custom d-flex align-items-center justify-content-center"><span
+										class="ion-ios-arrow-round-forward"></span></a>
 							</div>
-						
-							
 						</div>
+
+
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 	</section>
 	<section class="ftco-section">
-		<center><h1><b>Map</b></h1></center>
+		<center>
+			<h1><b>Map</b></h1>
+		</center>
 		<div class="container-fluid px-md-5">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="block-2 ftco-animate">
-						
-							<div class="front" style="background-image: url(images/vill/map2.png);">
-								<div class="box">
-									<!-- <h2> Concern Citizen </h2>
+
+						<div class="front" style="background-image: url(images/vill/map2.png);">
+							<div class="box">
+								<!-- <h2> Concern Citizen </h2>
 									<p> Samuel James </p> -->
-								</div>
 							</div>
-							
-					
+						</div>
+
+
 					</div>
 				</div>
 				<div class="col-lg-9 col-sm-12">
 					<div class="block-2 ftco-animate">
-						
-							<div class="services">
-							<div class="front" style="background-image: url(//images/vill/Map1.png);">
+
+						<div class="services">
+							<div class="front" style="background-image: url();">
 								<div class="box">
 									<h2> Map </h2>
 									<h2>🗺 Explore Siregaon Bandh on the Map</h2>
 
-									<p>"Find your way around Siregaon Bandh with our interactive map—discover key locations, landmarks, and more."
+									<p>"Find your way around Siregaon Bandh with our interactive map—discover key
+										locations, landmarks, and more."
 									</p>
 									<h2>📍 What You Can Find on the Map</h2>
-									
+
 									<p>Village Boundaries & Roads – Navigate the main routes and shortcuts.</p>
-									
+
 									<p>Schools & Colleges – Locate educational institutions easily.</p>
-									
+
 									<p>Shops & Markets – Find essential stores and local businesses.</p>
-									
+
 									<p>Temples & Religious Places – Explore places of worship and cultural heritage.</p>
-									
-									<p>Health Centers & Government Offices – Locate medical facilities and public services.</p>
-									
-									
+
+									<p>Health Centers & Government Offices – Locate medical facilities and public
+										services.</p>
+
+
 									<h2>🧭 How to Use the Map?</h2>
+
 									
 									<p>Zoom in/out to explore different areas.</p>
-									
-								<p>	Click on icons for details about specific places.</p>
-									
+
+									<p> Click on icons for details about specific places.</p>
+
 									<p>Use search to find a location quickly.</p>
 								</div>
-								<a href="#" class="btn-custom d-flex align-items-center justify-content-center"><span
-									class="ion-ios-arrow-round-forward"></span></a>
+								<a href="/subindex/map.html" class="btn-custom d-flex align-items-center justify-content-center"><span
+										class="ion-ios-arrow-round-forward"></span></a>
 							</div>
-							</div>
-						
-							
 						</div>
+
+
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</section>
 
@@ -438,10 +585,10 @@
 							"Every corner of Siregaon Bandh tells a story of resilience, love, and unity."<br>
 							Proudly maintained by the people of Siregaon Bandh with love and dedication. </p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li>
+							<!-- <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> -->
+							<li class="ftco-animate"><a href="https://www.facebook.com/share/15EnN33Ubd/"><span class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="https://www.instagram.com/official_gpsiregaon1958?utm_source=qr&igsh=eWd4M2xld3RyNXp6"><span class="icon-instagram"></span></a></li>
+							<li class="ftco-animate"><a href="http://www.youtube.com/@%E0%A4%B8%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%9F%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%AA%E0%A4%82%E0%A4%9A%E0%A4%BE%E0%A4%AF%E0%A4%A4%E0%A4%B8%E0%A4%BF%E0%A4%B0%E0%A5%87%E0%A4%97%E0%A4%BE%E0%A4%B5%E0%A4%AC%E0%A4%BE%E0%A4%82%E0%A4%A7"><span class="icon-youtube"></span></a></li>
 
 
 						</ul>
@@ -451,22 +598,24 @@
 					<div class="ftco-footer-widget mb-4 ml-md-5">
 						<h2 class="ftco-heading-2">Practice Areas</h2>
 						<ul class="list-unstyled">
-							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span> Community Services
+							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
+									Community Services
 								</a></li>
 							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
 									Environment </a></li>
 							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
 									Culture & Heritage </a></li>
 							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
-									Infrastructure Development  </a></li>
+									Infrastructure Development </a></li>
 							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
 									Tourism </a></li>
 							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
 									Environment Focus </a></li>
-									<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
+							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
 									Village Administration </a></li>
-							<li><a href="./login/index1.HTML" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
-									Administretive Login </a></li>
+							<li><a href="./login/index1.HTML" class="py-1 d-block"><span
+										class="ion-ios-arrow-forward mr-3"></span>
+									Administrative Login </a></li>
 						</ul>
 					</div>
 				</div>
@@ -499,7 +648,8 @@
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
 			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" /></svg></div>
+				stroke="#F96D00" />
+		</svg></div>
 
 
 	<script src="js/jquery.min.js"></script>
@@ -511,41 +661,15 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/aos.js"></script>
+	<!-- <script src="js/aos.js"></script> -->
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
-	<script src="js/google-map.js"></script>
+	<!-- <script src="js/google-map.js"></script> -->
 	<script src="js/main.js"></script>
-
+	<script src="index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- <link rel="icon" type="image/x-icon" href="./images/favicon.ico"> -->
+	
 </body>
-<script>
- document.addEventListener('DOMContentLoaded', function () {
-            const slides = document.querySelectorAll('.slide');
-            const titleElement = document.getElementById('image-title');
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-            let currentSlide = 0;
 
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                slides[index].classList.add('active');
-                titleElement.textContent = slides[index].getAttribute('data-title');
-            }
-
-            function showNextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            function showPrevSlide() {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            nextBtn.addEventListener('click', showNextSlide);
-            prevBtn.addEventListener('click', showPrevSlide);
-            setInterval(showNextSlide, 4000);
-        });
-
-</script>
 </html>
