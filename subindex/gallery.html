@@ -19,6 +19,9 @@
 	<!-- FontAwesome for Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
 
 
@@ -50,6 +53,89 @@
     object-fit: fill;
   }
 }
+body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .gallery-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .gallery-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .gallery-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .gallery-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery-buttons a {
+            width: 80%;
+            max-width: 300px;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+            margin-bottom: 15px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+        .gallery-buttons a:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+        }
+        .btn-village {
+            background-color: #FFD700;
+            color: #333;
+        }
+        .btn-village:hover {
+            background-color: #FFC107;
+        }
+        .btn-certificate {
+            background-color: #FF5722;
+            color: white;
+        }
+        .btn-certificate:hover {
+            background-color: #E64A19;
+        }
+        .btn-newspaper {
+            background-color: #2196F3;
+            color: white;
+        }
+        .btn-newspaper:hover {
+            background-color: #1976D2;
+        }
+        .gallery-info {
+            margin-top: 30px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-info h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .gallery-info p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
 </style>
 <body>
 
@@ -191,13 +277,35 @@
 			<div class="row no-gutters slider-text align-items-end justify-content-center">
 				<div class="col-md-9 ftco-animate pb-5 text-center">
 					<h1 class="mb-3 bread" id="image-title">Bringing Home the Trophy! 🥇</h1>
-					<p class="breadcrumbs"><span class="mr-2">Members</span></p>
+					<p class="breadcrumbs"><span class="mr-2">Gallery</span></p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<hr>
+	<section class="gallery-section">
+        <h2>Explore Our Village Gallery</h2>
+        <p>Discover the rich history and cultural moments of our village through different sections of our gallery. Choose from the options below:</p>
 
+        <div class="gallery-buttons">
+            <a href="villagegallery.html" class="btn-village">📸 Village Gallery</a>
+            <a href="certificategallery.html" class="btn-certificate">📜 Certificate Gallery</a>
+            <a href="newspapergallery.html" class="btn-newspaper">📰 Newspaper Gallery</a>
+        </div>
+
+        <div class="gallery-info">
+            <h3>📸 Village Gallery</h3>
+            <p>The Village Gallery showcases beautiful moments of our village, including cultural events, scenic landscapes, and traditional ceremonies. This section captures the essence of our community and its vibrant life.</p>
+
+            <h3>📜 Certificate Gallery</h3>
+            <p>The Certificate Gallery contains various achievements and honors received by the village and its members. This section displays educational awards, government recognitions, and other important certifications.</p>
+
+            <h3>📰 Newspaper Gallery</h3>
+            <p>The Newspaper Gallery features newspaper clippings and media coverage about our village. Here, you will find historical articles, important announcements, and press releases that highlight our village's achievements and stories.</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	
 	<hr>
 	<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -238,7 +346,7 @@
 									Environment Focus </a></li>
 							<li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>
 									Village Administration </a></li>
-							<li><a href="/login/index1.HTML" class="py-1 d-block"><span
+							<li><a href="../login/index1.HTML" class="py-1 d-block"><span
 										class="ion-ios-arrow-forward mr-3"></span>
 									Administrative Login </a></li>
 						</ul>
