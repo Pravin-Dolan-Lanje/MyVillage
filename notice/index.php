@@ -17,6 +17,7 @@ $result = $conn->query($sql);
 <body>
     <h1>Notice Management</h1>
     <a href="add_notice.php" class="add-btn">+ Add New Notice</a>
+     <a href="../login/admin.html" class="add-btn">Administrative panel</a>
     <h2>Notices List</h2>
     <?php if ($result->num_rows > 0): ?>
         <table>

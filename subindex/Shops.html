@@ -50,6 +50,16 @@
     object-fit: fill;
   }
 }
+.shop-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .shop-card:hover {
+            transform: scale(1.05);
+        }
+        .shop-image {
+            height: 200px;
+            object-fit: cover;
+        }
 </style>
 <body>
 
@@ -69,20 +79,9 @@
 						<a href="fff.html"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" >ABOUT</a>
 						<ul class="dropdown-menu">
 							<li><a href="#" class="dropdown-item">History</a></li>
-							<li class="dropdown-submenu">
-								<a class="dropdown-item dropdown-toggle" href="#">Culture</a>
-								<ul class="dropdown-menu">
-									<li><a href="#" class="dropdown-item">Festivals</a></li>
-									<li class="dropdown-submenu">
-										<a class="dropdown-item dropdown-toggle" href="#">Traditions</a>
-										<ul class="dropdown-menu">
-											<li><a href="#" class="dropdown-item">Traditional Music</a></li>
-											<li><a href="#" class="dropdown-item">Dances</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#" class="dropdown-item">Geography</a></li>
+							<li><a href="#" class="dropdown-item">Culture</a></li>
+                            <li><a href="../navbarfiles/villageinfo.html" class="dropdown-item">Village Info.</a></li>
+
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
@@ -100,19 +99,8 @@
 						<ul class="dropdown-menu">
 							<li><a href="#" class="dropdown-item">Health</a></li>
 							<li><a href="#" class="dropdown-item">Education</a></li>
-							<li class="dropdown-submenu">
-								<a class="dropdown-item dropdown-toggle" href="#">Government</a>
-								<ul class="dropdown-menu">
-									<li class="dropdown-submenu">
-										<a class="dropdown-item dropdown-toggle" href="#">Panchayat</a>
-										<ul class="dropdown-menu">
-											<li><a href="#" class="dropdown-item">Urban Planning</a>
-											</li>
-											<li><a href="#" class="dropdown-item">Public Works</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
+							<li><a href="#" class="dropdown-item">Government</a></li>
+
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
@@ -197,7 +185,47 @@
 		</div>
 	</section>
 	<hr>
-
+	<div class="container mt-4">
+		<h2 class="text-center mb-4">Shops in Siregaon Bandh</h2>
+	
+		<div class="row">
+			<!-- Shop 1 -->
+			<div class="col-md-6">
+				<div class="card shop-card shadow-sm mb-4">
+					<img src="shopphoto/1741056825926.jpg" class="card-img-top shop-image" alt="Shop 1">
+					<div class="card-body">
+						<h5 class="card-title">Mayank General Store</h5>
+						<p class="card-text">Best grocery store with daily essentials.</p>
+						<a href="../shops/shop1/viewshop1.php" class="btn btn-primary">View Products</a>
+					</div>
+				</div>
+			</div>
+	
+			<!-- Shop 2 -->
+			<div class="col-md-6">
+				<div class="card shop-card shadow-sm mb-4">
+					<img src="shopphoto/1741056825911.jpg" class="card-img-top shop-image" alt="Shop 2">
+					<div class="card-body">
+						<h5 class="card-title">Agrocare Fertilizer Shop</h5>
+						<p class="card-text">cropt fertilizer, Agriculture equipments.</p>
+						<a href="../shops/shop2/viewshop2.php" class="btn btn-primary">View Products</a>
+					</div>
+				</div>
+			</div>
+	
+			<!-- Shop 3 -->
+			<!-- <div class="col-md-6">
+				<div class="card shop-card shadow-sm mb-4">
+					<img src="images/shop3.jpg" class="card-img-top shop-image" alt="Shop 3">
+					<div class="card-body">
+						<h5 class="card-title">Sagar Electronics</h5>
+						<p class="card-text">All types of electronic gadgets and services.</p>
+						<a href="view_products.html?shop_id=3" class="btn btn-primary">View Products</a>
+					</div>
+				</div>
+			</div> -->
+		</div>
+	</div>
 	
 	<hr>
 	<footer class="ftco-footer ftco-bg-dark ftco-section">
@@ -254,6 +282,10 @@
 											262-195-121</span></a></li>
 								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">
 											siregaonbandh@gmail.com</span></a></li>
+											<li><a href="../forms/contact_us.php"><span class="ion-ios-arrow-forward mr-3"></span>
+												Contact-Us</a></li>
+												<li><a href="../forms/feedback.php"><span class="ion-ios-arrow-forward mr-3"></span>
+													Feedback</a></li>
 							</ul>
 						</div>
 					</div>

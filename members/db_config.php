@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root"; // Replace with your database username
-$password = ""; // Replace with your database password
-$dbname = "administrative login";
+$username = "root"; 
+$password = ""; 
+$dbname = "Siregaon_bandh";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

@@ -150,9 +150,29 @@ img {
 .actions img:hover {
     transform: scale(1.2);
 }
+@media screen and (max-width: 768px) {
+    table {
+        object-fit: fill;
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 8px;
+        padding: 5px;
+
+    }
+
+    .imgs {
+        width: 50px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 2px solid #ddd;
+    }
+}
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     table, form {
         width: 100%;
     }
@@ -165,4 +185,4 @@ img {
         font-size: 14px;
         padding: 8px;
     }
-}
+} */

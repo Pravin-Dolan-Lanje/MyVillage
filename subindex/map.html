@@ -50,6 +50,94 @@
     object-fit: fill;
   }
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* List container */
+.uls {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual Place List Item */
+.lis {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(110, 104, 104, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  transition: transform 0.3s ease;
+ /* display: flex;
+  align-items: center;
+  gap: 15px; /* Ensures spacing between image & text */
+}
+
+/* Hover effect on list items */
+.lis:hover {
+  transform: translateY(-5px);
+}
+
+/* Title Styling */
+.lih3 {
+  font-size: 24px;
+  color: rgb(187, 18, 18);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Description Styling */
+.description {
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  align-items:normal;
+  font-size: 16px;
+  color: black;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Image Styling */
+.facility-img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-right: 17px; 
+   /* Prevents image from shrinking */
+}
+
+/* Responsive Design for Smartphones */
+@media (max-width: 768px) {
+  .lis {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .facility-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .lih3 {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 15px;
+    text-align: center;
+  }
+}
 </style>
 <body>
 
@@ -69,20 +157,9 @@
 						<a href="fff.html"  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" >ABOUT</a>
 						<ul class="dropdown-menu">
 							<li><a href="#" class="dropdown-item">History</a></li>
-							<li class="dropdown-submenu">
-								<a class="dropdown-item dropdown-toggle" href="#">Culture</a>
-								<ul class="dropdown-menu">
-									<li><a href="#" class="dropdown-item">Festivals</a></li>
-									<li class="dropdown-submenu">
-										<a class="dropdown-item dropdown-toggle" href="#">Traditions</a>
-										<ul class="dropdown-menu">
-											<li><a href="#" class="dropdown-item">Traditional Music</a></li>
-											<li><a href="#" class="dropdown-item">Dances</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#" class="dropdown-item">Geography</a></li>
+							<li><a href="#" class="dropdown-item">Culture</a></li>
+                            <li><a href="../navbarfiles/villageinfo.html" class="dropdown-item">Village Info.</a></li>
+
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
@@ -100,19 +177,8 @@
 						<ul class="dropdown-menu">
 							<li><a href="#" class="dropdown-item">Health</a></li>
 							<li><a href="#" class="dropdown-item">Education</a></li>
-							<li class="dropdown-submenu">
-								<a class="dropdown-item dropdown-toggle" href="#">Government</a>
-								<ul class="dropdown-menu">
-									<li class="dropdown-submenu">
-										<a class="dropdown-item dropdown-toggle" href="#">Panchayat</a>
-										<ul class="dropdown-menu">
-											<li><a href="#" class="dropdown-item">Urban Planning</a>
-											</li>
-											<li><a href="#" class="dropdown-item">Public Works</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
+							<li><a href="#" class="dropdown-item">Government</a></li>
+
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
@@ -198,8 +264,53 @@
 	</section>
 	<hr>
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15432.03547765663!2d80.00686394563877!3d20.95707316646117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2b7986c6f89eef%3A0x33432d303f170dbf!2z4KS44KS_4KSw4KWH4KSX4KS-4KSB4KS1LCDgpK7gpLngpL7gpLDgpL7gpLfgpY3gpJ_gpY3gpLA!5e1!3m2!1shi!2sin!4v1738569676415!5m2!1shi!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-	
+	<center><h1 style="color:brown">NEARBY PLACES TO VISIT</h1></center>
+    <ul class="uls">
+        <!-- Place 1 -->
+        <li class="lis">
+          <h3 class="lih3">Place 1 - Beautiful Lake</h3>
+          <div class="description">
+			<img src="mapphoto/lake.jpg" alt="lake Image" class="facility-img">
+            <p>Located on the serene coastline, Beautiful Beach offers crystal-clear waters, golden sands, and picturesque sunsets. Ideal for swimming, sunbathing, and beach activities.</p>
+          </div>
+        </li>
+        <!-- Place 2 -->
+        <li class="lis">
+          <h3 class="lih3">Place 2 - Hanuman Temple</h3>
+          <div class="description">
+			<img src="mapphoto/hanumanmandir.jpg" alt=" Image" class="facility-img">
+<p>The Hanuman Mandir in my village is a sacred and peaceful place where devotees gather to seek blessings.
+	 The temple's atmosphere is filled with the sound of bells and devotional chants, creating a sense of spiritual energy. 
+	 A beautiful idol of Lord Hanuman is worshipped with great faith, especially on Tuesdays and Saturdays when many villagers 
+	 visit to offer prayers. During festivals like Hanuman Jayanti, the temple is beautifully decorated, and special rituals take place.
+	  It is not just a place of worship but also a center of unity and devotion for the villagers.</p>
+		</div>
+        </li>
+        <!-- Place 3 -->
+        <li class="lis">
+          <h3 class="lih3">Place 3 - Maa Bhavani Temple</h3>
+          <div class="description">
+			<img src="mapphoto/matabhavani.jpg" alt=" Image" class="facility-img">
+            <div><p>The Maa Bhavani Temple in my village is a symbol of faith and devotion,
+				 attracting devotees from near and far. Surrounded by natural beauty, the temple exudes a peaceful
+				  and spiritual atmosphere. The idol of Maa Bhavani is beautifully adorned, and daily prayers and aarti
+				   fill the air with divine energy. During festivals like Navratri, the temple becomes a hub of celebrations, 
+				   with bhajans, rituals, and a large gathering of devotees. It is a sacred place where villagers seek blessings, 
+				   peace, and strength in their lives.</p></div>
+          </div>
+        </li>
+        <!-- Place 4 -->
+        <li class="lis">
+          <h3 class="lih3">Place 4 - Garden</h3>
+          <div class="description">
+			<img src="mapphoto/garden.jpg" alt=" Image" class="facility-img">
+          <p>The garden in my village is a peaceful and refreshing place filled with lush greenery and colorful flowers.
+			 Tall trees provide shade, while small pathways lead to cozy spots where people can relax. Birds chirp happily, 
+			 and the cool breeze carries the scent of blooming flowers. It is a favorite place for children to play, elders to walk, 
+			 and everyone to enjoy the beauty of nature. The garden adds charm to the village, offering a perfect escape from daily life.</p>
+		</div>
+        </li>
+      </ul> 
 	<hr>
 	<footer class="ftco-footer ftco-bg-dark ftco-section">
 		<div class="container">
@@ -255,6 +366,8 @@
 											262-195-121</span></a></li>
 								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">
 											siregaonbandh@gmail.com</span></a></li>
+											<li><a href="../forms/contact_us.php"><span class="ion-ios-arrow-forward mr-3"></span>
+												Contact-Us</a></li>
 							</ul>
 						</div>
 					</div>
