@@ -1,5 +1,6 @@
 <?php
-include 'db_config.php';
+include '../db_config.php';
+require_once '../Admin/auth_check.php';
 
 $id = $_GET['id'];
 $sql = "DELETE FROM members WHERE sr_no=$id";

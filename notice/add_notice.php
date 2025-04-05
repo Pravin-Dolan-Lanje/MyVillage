@@ -1,5 +1,6 @@
 <?php
-include 'db_config.php';
+include '../db_config.php';
+require_once '../Admin/auth_check.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $notice = $_POST['notice'];

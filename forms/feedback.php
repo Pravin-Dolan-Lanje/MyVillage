@@ -1,5 +1,5 @@
 <?php
-include 'contact/connection.php';
+include '../db_config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="../subindex/gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="../subindex/school.html">School/College</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../subindex/Shops.html">Shops</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../subindex/shops/Shops.php">Shops</a></li>
                     <li class="nav-item"><a class="nav-link" href="../subindex/map.html">Map</a></li>
                 </ul>
             </div>

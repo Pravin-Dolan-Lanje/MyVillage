@@ -72,23 +72,7 @@
 <body>
 
     <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="../../index.html">Siregaon Bandh</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../subindex/gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../subindex/school.html">School/College</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../subindex/Shops.html">Shops</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../../subindex/map.html">Map</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="header-container"></div>
 
     <!-- School Information Section -->
     <div class="container content">
@@ -131,15 +115,27 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Siregaon Bandh. All rights reserved.</p>
-        <p>
-            <a href="../../login/index1.HTML">Administrative Login</a> |
-            Design by Pravin D. Lanje|
-            <a href="../../forms/contact_us.php">Contact Us</a>
-        </p>
-    </footer>
-
+    <div id="footer-container"></div>
+    <script>
+        // Function to load HTML into an element
+        async function loadHTML(url, elementId) {
+          try {
+            const response = await fetch(url);
+            const html = await response.text();
+            document.getElementById(elementId).innerHTML = html;
+          } catch (err) {
+            console.error(`Failed to load ${url}:`, err);
+          }
+        }
+        
+        // Load your components when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+          loadHTML('../include/header2.html', 'header-container');
+          loadHTML('../include/footer2.html', 'footer-container');
+        //   loadHTML('include/slider.html', 'slider-container');
+        });
+        
+    </script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

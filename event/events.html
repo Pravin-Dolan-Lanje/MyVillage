@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Event Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .swiper-container {
+            width: 90%;
+            height: 450px;
+            margin: 20px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    
+        .swiper-slide img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+        .subtitle {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+        }
+    
+        /* Swiper Navigation Arrows */
+        .swiper-button-prev, .swiper-button-next {
+            color: #28a745;
+        }
+    
+        /* Swiper Pagination Dots */
+        .swiper-pagination-bullet-active {
+            background: #28a745 !important;
+        }
+    </style>
+    
+    <style>
+        .swiper-container {
+            width: 80%;
+            height: 400px;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .swiper-slide img {
+            width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+        }
+        .subtitle {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="event-slider"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        fetch('fetch_events.php')
+            .then(response => response.json())
+            .then(data => {
+                let slider = document.getElementById("event-slider");
+                data.forEach(event => {
+                    let slide = document.createElement("div");
+                    slide.classList.add("swiper-slide");
+                    slide.innerHTML = `<img src="${event.image_url}" alt="Event"><div class="subtitle">${event.subtitle}</div>`;
+                    slider.appendChild(slide);
+                });
+
+                new Swiper('.swiper-container', {
+                    loop: true,
+                    pagination: { el: '.swiper-pagination', clickable: true },
+                    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                    autoplay: { delay: 3000 }
+                });
+            });
+    </script>
+
+</body>
+</html>

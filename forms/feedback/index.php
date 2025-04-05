@@ -1,5 +1,6 @@
 <?php
-include '../contact/connection.php';
+include '../../db_config.php';
+require_once '../../Admin/auth_check.php';
 
 // Fetch Members
 $sql = "SELECT * FROM feedback";
@@ -16,7 +17,7 @@ $result = $conn->query($sql);
 </head>
 <body>
     <h1>Contact_US Management</h1>
-   <button> <a href="../../login/admin.html" class="add-btn">Administrative panel</a></button>
+   <button> <a href="../../login/dashboard.php" class="add-btn">Administrative panel</a></button>
     <h2> List</h2>
     <?php if ($result->num_rows > 0): ?>
         <table>

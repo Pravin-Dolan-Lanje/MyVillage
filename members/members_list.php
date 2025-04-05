@@ -1,5 +1,6 @@
 <?php
-include 'db_config.php';
+include '../db_config.php';
+require_once '../Admin/auth_check.php';
 
 // Fetch Members
 $sql = "SELECT * FROM members";
@@ -17,7 +18,7 @@ $result = $conn->query($sql);
 <body>
     <h1>Members Management</h1>
    <button> <a href="add_member.php" class="add-btn">+ Add New Member</a></button>
-   <button> <a href="../login/admin.html" class="add-btn">Administrative panel</a></button>
+   <button> <a href="../login/dashboard.php" class="add-btn">Administrative panel</a></button>
     <h2>Members List</h2>
     <?php if ($result->num_rows > 0): ?>
         <table>

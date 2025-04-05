@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siregaon Village Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2adf6f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .containers {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2adf6f;
+        }
+
+        h3 {
+            color: #e74c3c;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .village-section {
+            margin-bottom: 30px;
+        }
+
+        .census-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .census-table th, .census-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .census-table th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .census-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .amenities-list {
+            list-style-type: none;
+            padding-left: 0;
+            column-count: 2;
+        }
+
+        .amenities-list li {
+            padding: 8px 0;
+            break-inside: avoid;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer a {
+            color: #f8f9fa;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.3em;
+            }
+            
+            .amenities-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bootstrap Navbar -->
+    <div id="header-container"></div>
+
+    <div class="content">
+        <div class="containers">
+            <div class="village-section">
+                <h2>Siregaon Village Details</h2>
+                <p>Siregaon is a Village in Arjuni Morgaon Sub-Division, Gondia district and Maharashtra State. Siregaon village Pin code is 441702. Siregaon Village Total population is 1696 and number of houses are 318. Female Population is 46.9%. Village literacy rate is 77.7% and the Female Literacy rate is 31.7%.</p>
+                
+                <h3>Population</h3>
+                <table class="census-table">
+                    <tr>
+                        <th>Census Parameter</th>
+                        <th>Census Data</th>
+                    </tr>
+                    <tr>
+                        <td>Total Population</td>
+                        <td>1696</td>
+                    </tr>
+                    <tr>
+                        <td>Total No of Houses</td>
+                        <td>318</td>
+                    </tr>
+                    <tr>
+                        <td>Female Population %</td>
+                        <td>46.9% (795)</td>
+                    </tr>
+                    <tr>
+                        <td>Total Literacy rate %</td>
+                        <td>77.7% (1317)</td>
+                    </tr>
+                    <tr>
+                        <td>Female Literacy rate</td>
+                        <td>31.7% (537)</td>
+                    </tr>
+                    <tr>
+                        <td>Scheduled Tribes Population %</td>
+                        <td>42.7% (724)</td>
+                    </tr>
+                    <tr>
+                        <td>Scheduled Caste Population %</td>
+                        <td>13.4% (228)</td>
+                    </tr>
+                    <tr>
+                        <td>Working Population %</td>
+                        <td>43.2%</td>
+                    </tr>
+                    <tr>
+                        <td>Child(0 -6) Population by 2011</td>
+                        <td>145</td>
+                    </tr>
+                    <tr>
+                        <td>Girl Child(0 -6) Population % by 2011</td>
+                        <td>47.6% (69)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="village-section">
+                <h3>Location and Administration</h3>
+                <p>Siregaon is 6 km distance from Sub District HeadQuarter Arjuni Morgaon and it is 6 km distance from District HeadQuarter Gondiya. Nearest Statutory Town is Desaiganj in 49 km Distance. Siregaon Total area is 182.67 hectares, Forest area is 104.55 hectares, Non-Agricultural area is 35.26 hectares, Total irrigated area is 23.67 hectares and Total Water fall area is 0 hectares.</p>
+            </div>
+            
+            <div class="village-section">
+                <h3>Education</h3>
+                <p>Governement Pre Primary, Govt Primary, Govt Middle, Private Middle and Govt Secondary Schools are available in this Village. Nearest Govt Disabled School, Govt Engineering College, Govt Medical College and Govt MBA college are in Arjuni. Nearest Govt Polytechnic College and Govt ITA College are in Sakoli. Nearest Govt Arts and Science Degree College is in Kakadi.</p>
+            </div>
+            
+            <div class="village-section">
+                <h3>Health</h3>
+                <p>1 Mobile Health centre, 1 RMP doctor, 2 Faith Healers are available in this village.</p>
+            </div>
+            
+            <div class="village-section">
+                <h3>Agriculture</h3>
+                <p>17 hours agricultural power supply in summer and 17 hours agricultural power supply in winter is available in this village. Total irrigated area in this village is 23.67 hectares from canals 58.3 hectares and from Lakes or tanks 100.7 hectares are the Sources of irrigation.</p>
+            </div>
+            
+            <div class="village-section">
+                <h3>Drinking-Water and Sanitation</h3>
+                <p>Treated Tap Water Supply all round the year and in summer also available. UnCovered Well and Hand Pump are other Drinking Water sources.</p>
+                <p>Open Drainage System Available in this Village. There is system to Collect garbage on street. Drain water is discharged into sewer plant.</p>
+            </div>
+            
+            <div class="village-section">
+                <h3>Communication</h3>
+                <p>LandLine available. Mobile Coverage is available. Internet Centre available in this village. Private Courier Facility available in this village.</p>
+            </div>
+            
+            <div class="village-section">
+                <h3>Transportation</h3>
+                <p>Public Bus service available in this village. Nearest Railway Station is in 5 - 12 km. Autos Available in this Village.</p>
+                <p>No Nearest National Highway in less than 10 km. No Nearest State Highway in less than 10 km. No Nearest District Road in less than 10 km.</p>
+                <p>Pucca road, Kuccha Road, Macadam Road and Foot Path are other Roads and Transportation within the village.</p>
+            </div>
+            
+            <div class="village-section">
+                <h3>Commerce</h3>
+                <p>No ATM in less than 4 km. No Commercial Bank in less than 4 km. No Cooperative Bank in less than 4 km. Agricultural Marketing Society is available in this village.</p>
+            </div>
+            
+            <div class="village-section">
+                <h3>Other Amenities</h3>
+                <ul class="amenities-list">
+                    <li>Power supply with 18 hour power supply in summer</li>
+                    <li>17 hour power supply in winter</li>
+                    <li>Anganwadi centre</li>
+                    <li>ASHA worker</li>
+                    <li>Birth & Death registration office</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container" class="footer">
+       
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to load HTML into an element
+        async function loadHTML(url, elementId) {
+          try {
+            const response = await fetch(url);
+            const html = await response.text();
+            document.getElementById(elementId).innerHTML = html;
+          } catch (err) {
+            console.error(`Failed to load ${url}:`, err);
+          }
+        }
+        
+        // Load your components when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+          loadHTML('../include/header2.html', 'header-container');
+          loadHTML('../include/footer2.html', 'footer-container');
+        });
+    </script>
+</body>
+</html>

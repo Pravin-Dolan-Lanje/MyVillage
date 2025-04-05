@@ -1,6 +1,13 @@
-
 <?php
-include 'contact/connection.php';
+include '../db_config.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Include PHPMailer files
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
@@ -9,15 +16,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $sql = "INSERT INTO `contact_us` (`id`, `name`, `email`, `message`) VALUES (NULL, '$name', '$email', '$message')";
     if ($conn->query($sql) === TRUE) {
-        // header("Location: members_list.php?msg=add_success");
-        $message="Your message is recorded succefully";
-      echo " <script>alert('$message');</script>";
-        // exit();
+        echo "<script>alert('Your message has been recorded successfully.');</script>";
+
+        // Create PHPMailer instance
+        $mail = new PHPMailer(true);
+        try {
+            // SMTP settings
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'dnyan4mule@gmail.com';  // Your Gmail
+            $mail->Password   = 'yllv anbv rihc nkup';        // Use App Password, NOT your real password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port       = 465;
+
+            
+
+            // Sender and recipient
+            $mail->setFrom('dnyan4mule@gmail.com', 'Sirebaon Bandh');
+            $mail->addAddress($email, $name); // Send confirmation to user
+            $mail->addAddress('dnyan4mule@gmail.com'); // Send message copy to admin
+
+            // Email content
+            $mail->isHTML(true);
+            $mail->Subject = 'Thank You for Contacting Us';
+            $mail->Body    = "<p>Hello <b>$name</b>,</p>
+                              <p>Thank you for reaching out! We received your message:</p>
+                              <blockquote>$message</blockquote>
+                              <p>We will get back to you soon.</p>
+                              <p>Best regards,<br>Sirebaon Bandh Team</p>";
+
+            $mail->send();
+            echo "<script>alert('Message has been sent successfully.');</script>";
+        } catch (Exception $e) {
+            echo "<script>alert('Error sending email: {$mail->ErrorInfo}');</script>";
+        }
     } else {
-        echo "Error: " . $conn->error;
+        echo "<script>alert('Error inserting data into the database.');</script>";
     }
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -30,24 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
-<body style="background-image: url(contact/contus.jpg);background-size:cover;" >
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">Siregaon Bandh</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../subindex/gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../subindex/school.html">School/College</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../subindex/Shops.html">Shops</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../subindex/map.html">Map</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body style="background-image: url('contact/contus.jpg');background-size:cover;" >
+<div id="header-container"></div>
   <header>
     <h1>Contact Us</h1>
     <p>We'd love to hear from you. Feel free to get in touch!</p>
@@ -70,16 +93,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <p id="successMessage" style="display:none; color: green;">Thank you for reaching out! We'll get back to you soon.</p>
   </main>
   <!-- <script src="cont_us.js"></script> -->
-  <footer class="footer">
-        <p>&copy; 2025 Siregaon Bandh. All rights reserved.</p>
-        <p>
-            <a href="../login/index1.HTML">Administrative Login</a> | 
-            Design by Pravin D. Lanje| 
-            <a href="contact_us.php">Contact Us</a>
-        </p>
-    </footer>
-
+  <div id="footer-container"></div>
+  <script>
+        // Function to load HTML into an element
+        async function loadHTML(url, elementId) {
+          try {
+            const response = await fetch(url);
+            const html = await response.text();
+            document.getElementById(elementId).innerHTML = html;
+          } catch (err) {
+            console.error(`Failed to load ${url}:`, err);
+          }
+        }
+        
+        // Load your components when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+          loadHTML('../include/header2.html', 'header-container');
+          loadHTML('../include/footer2.html', 'footer-container');
+        //   loadHTML('include/slider.html', 'slider-container');
+        });
+        
+    </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
+
